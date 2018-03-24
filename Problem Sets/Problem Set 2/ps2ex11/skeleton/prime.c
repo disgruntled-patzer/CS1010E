@@ -7,6 +7,7 @@
 // Lau Yan Han
 
 #include <stdio.h>
+#include <math.h>
 
 int is_prime(int num);
 
@@ -30,17 +31,22 @@ int main(void) {
 // Determines whether a number is prime
 int is_prime(int num) {
 
-    int counter;
+    int c;
 
-    if (num == 1) {
-        return 0; //Because 1 is not a prime
+    if (num == 1){
+        return 0; //1 is not a prime number
     }
-    else { //If number is not 1, enter loop
-        for (counter = 2; counter < num; counter++){
-            if (num%counter == 0){
-                return 0; //If any counter (apart from 1 and num) is a divisor of the number, number is not prime, return FALSE
-            }
+    if (num % 2 == 0 && num > 2) {
+        return 0; //If num is even, it cannot be prime (used to optimize runtime)
+    }
+
+    //If num is odd and isn't 1, enter loop
+    for (c = 2; c < floor(sqrt(num)); c++){
+        //floor(sqrt(num)) is used to optimize runtime; any number greater than sqrt(num) cannot possibly be a divisor of num
+        if (num%c == 0){
+            return 0; //If any counter (apart from 1 and num) is a divisor of the number, number is not prime, return FALSE
         }
     }
-	return 1;  // If loop is exited, the number is prime and thus return TRUE
+
+	return 1; //If loop is exited, number is prime
 }
