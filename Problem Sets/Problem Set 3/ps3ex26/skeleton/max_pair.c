@@ -10,9 +10,11 @@
 #include <stdio.h>
 #define NROWS 4
 #define NCOLS 4
+#define NDIGITS 10 //Number of digits from 0 to 9 (total of 10)
 
 void scan_matrix(int mtx[NROWS][NCOLS]);
 int get_max_pairs(int mtx[NROWS][NCOLS]);
+int find_max(int number[NDIGITS]);
 void print_matrix(int mtx[NROWS][NCOLS]);
 
 int main(void) {
@@ -46,10 +48,9 @@ void scan_matrix(int mtx[NROWS][NCOLS]) {
 int get_max_pairs(int mtx[NROWS][NCOLS]) {
 
     int row, col; //Used to loop through mtx to scan for pairs
-    int number[10] = {0}; //Number of pairs for each digit from 0 to 9, initialized to 0
+    int number[NDIGITS] = {0}; //Number of pairs for each digit from 0 to 9, initialized to 0
     int digit; //If a pair is found, this variable copies the number in the pair to be stored in the "number" array
-    int a; //This will run a loop through the "number" array to find the digit with the highest pair value
-    int max_pairs = 0; //Maximum number of pairs in the matrix, initialize to zero at first
+    int max_pairs; //Maximum number of pairs in the matrix
 
     //This loop checks for pairs in the rows of the matrix
     for (row = 0; row < NROWS; row++){
@@ -71,14 +72,23 @@ int get_max_pairs(int mtx[NROWS][NCOLS]) {
         }
     }
 
-    //The last loop runs through the "number" array to find the digit with the highest pair value
-    for (a = 0; a < 10; a++){
+    //Use find_max function to scan through the "number" array and find the digit with highest pair value
+    max_pairs = find_max(number);
+
+	return max_pairs;
+}
+
+int find_max(int number[NDIGITS]){
+
+    int a; //This will run a loop through the "number" array to find the digit with the highest pair value
+    int max_pairs = 0;
+
+    for (a = 0; a < NDIGITS; a++){
         if (number[a] > max_pairs){
             max_pairs = number[a];
         }
     }
-
-	return max_pairs;
+    return max_pairs;
 }
 
 // For debugging
