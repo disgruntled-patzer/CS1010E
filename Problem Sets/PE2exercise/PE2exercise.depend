@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1522300911 source:c:\users\lenovo\desktop\pe2exercise\main.c
+	<stdio.h>
+	<stdlib.h>
+
