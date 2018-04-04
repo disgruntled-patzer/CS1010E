@@ -24,7 +24,7 @@ int main(void) {
 	printf("Enter the number of rocks: ");
 	scanf("%d", &num_rocks);
 
-	printf("Enter locations of  rocks: ");
+	printf("Enter locations of %d rocks: ", num_rocks);
 	for (a = 1; a < num_rocks + 1; a++){ //The entry rocks[0] holds zero, which is the starting point of the rabbit
         scanf("%d", &rocks[a]);
 	}

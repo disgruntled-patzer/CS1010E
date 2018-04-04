@@ -101,5 +101,5 @@ int is_palindrome(char str[]) {
         }
     }
 
-	return 1; //If loop exits without returning 0, string is palidromic
+	return 1; //If loop exits without returning 0, string is palindromic
 }

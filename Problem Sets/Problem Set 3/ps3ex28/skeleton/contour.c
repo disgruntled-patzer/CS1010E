@@ -68,10 +68,10 @@ int is_peak(int map[][MAX], int i, int j){
 
     int a, b; //New loop counters for row and column respectively
 
-    //Scan the 8 entries surrounding map[i][j], if any of them is same or greater than map[i][j], then map[i][j] is not a peak
+    //Scan the 8 entries surrounding map[i][j], if any of them is equal/greater than map[i][j], then map[i][j] is not a peak
     for (a = i - 1; a <= i + 1; a++){
         for (b = j - 1; b <= j + 1; b++){
-            if (map[a][b] != map[i][j] && map[a][b] >= map[i][j]){
+            if (!(a == i && b == j) && map[a][b] >= map[i][j]){ // !(a == i && b == j) ensures we are not comparing the same entry
                 return 0;
             }
         }
@@ -84,10 +84,10 @@ int is_valley(int map[][MAX], int i, int j){
 
     int a, b; //New loop counters for row and column respectively
 
-    //Scan the 8 entries surrounding map[i][j], if any of them is same or lesser than map[i][j], then map[i][j] is not a valley
+    //Scan the 8 entries surrounding map[i][j], if any of them is equal/lesser than map[i][j], then map[i][j] is not a valley
     for (a = i - 1; a <= i + 1; a++){
         for (b = j - 1; b <= j + 1; b++){
-            if (map[a][b] != map[i][j] && map[a][b] <= map[i][j]){
+            if (!(a == i && b == j) && map[a][b] <= map[i][j]){ // !(a == i && b == j) ensures we are not comparing the same entry
                 return 0;
             }
         }
@@ -113,8 +113,8 @@ void getHikeTrail(int map[][MAX], int hike[][MAX], int row, int col) {
     do{
        modified = 0; //Reset modification parameter to zero: No modification has taken place yet for this iteration
 
-       for (i = 1; i < row; i++){ //Scan through the matrix rows and columns
-            for (j = 1; j < col; j++){
+       for (i = 0; i < row; i++){ //Scan through the matrix rows and columns
+            for (j = 0; j < col; j++){
 
                 if (hike[i][j] == 1){ //Check whether the test entry was already marked as reachable
                     continue; //If so, continue to next iteration (no point testing again)
