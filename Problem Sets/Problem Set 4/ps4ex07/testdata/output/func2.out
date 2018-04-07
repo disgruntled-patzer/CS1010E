@@ -1,0 +1,5 @@
+Enter s1: Enter s2: my_strlen(s1) returns 5
+my_strlen(s2) returns 5
+my_strcmp(s1, s2) returns 15
+my_strcat(s1, s2) returns ac bdab cd
+my_strcpy(s1, s2) returns ab cd

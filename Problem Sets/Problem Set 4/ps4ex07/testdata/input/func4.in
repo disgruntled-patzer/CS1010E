@@ -1,0 +1,2 @@
+my_strcmp(s1, s2) returns 15
+my_strcat(s1, s2) returns ac bdab cd

@@ -1,0 +1,5 @@
+Enter s1: Enter s2: my_strlen(s1) returns 98
+my_strlen(s2) returns 1
+my_strcmp(s1, s2) returns -15
+my_strcat(s1, s2) returns "Even if it doesn't extend beyond that, we can get the cooperation of the neighbouring countries,"t
+my_strcpy(s1, s2) returns t
