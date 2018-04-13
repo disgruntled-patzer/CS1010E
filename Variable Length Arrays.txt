@@ -1,0 +1,25 @@
+// m = number of rows
+// n = number of columns
+
+int *varArray = malloc(sizeof(int) * n);)
+if(varArray == NULL){
+	//Error
+}
+
+//Use array
+varArray[k]
+
+free(varArray);
+
+int **varArray = malloc(sizeof(int *) * m);
+if(varArray == NULL){
+	//Error
+}else{
+	int i;
+for(i = 0; i < m; i++){
+	varArray[i] = malloc(sizeof(int) * n)
+
+//Use array
+varArray[k][s]
+
+free(varArray);
