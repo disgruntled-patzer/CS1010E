@@ -1,0 +1,15 @@
+Enter the number of points: Enter x- and y-coordinates of 12 points:
+After sort:
+Point # 0: (12,76)
+Point # 1: (50,321)
+Point # 2: (54,12)
+Point # 3: (54,35)
+Point # 4: (98,123)
+Point # 5: (123,32)
+Point # 6: (123,83)
+Point # 7: (213,79)
+Point # 8: (321,123)
+Point # 9: (389,91)
+Point #10: (435,213)
+Point #11: (843,120)
+Sum of lengths of vertical and horizontal lines = 74

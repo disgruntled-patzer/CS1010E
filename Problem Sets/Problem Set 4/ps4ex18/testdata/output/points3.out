@@ -1,0 +1,11 @@
+Enter the number of points: Enter x- and y-coordinates of 8 points:
+After sort:
+Point # 0: (-13,-10)
+Point # 1: (-7,-10)
+Point # 2: (-7,-7)
+Point # 3: (-2,-7)
+Point # 4: (-2,-3)
+Point # 5: (5,-3)
+Point # 6: (5,0)
+Point # 7: (5,2)
+Sum of lengths of vertical and horizontal lines = 30
